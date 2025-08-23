@@ -264,9 +264,6 @@ npm run type-check   # Run TypeScript checks
 - [ ] Blockchain donation tracking
 - [ ] Machine learning improvements
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
