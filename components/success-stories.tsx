@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { AnimatedImage } from "@/components/ui/animated-image"
 import { Button } from "@/components/ui/button"
 import { MapPin, Calendar } from "lucide-react"
 
@@ -43,42 +42,43 @@ export function SuccessStories() {
         </div>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {stories.map((story, index) => (
-            <Card key={index} className="group overflow-hidden transition-all duration-300 hover:shadow-lg">
-              <div className="relative aspect-[4/3] w-full perspective">
-                <div className="absolute inset-0 preserve-3d backface-hidden transition-all duration-700 group-hover:rotate-y-180">
-                  <AnimatedImage
-                    src={story.image}
+            <Card
+              key={index}
+              className="group overflow-hidden transition-all duration-300 hover:shadow-lg flex flex-col h-full"
+            >
+              <div className="relative aspect-[4/3] w-full overflow-hidden">
+                <div className="absolute inset-0 transition-all duration-700 group-hover:opacity-0">
+                  <img
+                    src={story.image || "/placeholder.svg"}
                     alt={`${story.title} - Before`}
-                    effect="parallax"
                     className="h-full w-full object-cover"
                   />
                 </div>
-                <div className="absolute inset-0 preserve-3d backface-hidden rotate-y-180 transition-all duration-700 group-hover:rotate-y-0">
-                  <AnimatedImage
-                    src={story.afterImage}
+                <div className="absolute inset-0 opacity-0 transition-all duration-700 group-hover:opacity-100">
+                  <img
+                    src={story.afterImage || "/placeholder.svg"}
                     alt={`${story.title} - After`}
-                    effect="parallax"
                     className="h-full w-full object-cover"
                   />
                 </div>
               </div>
-              <CardContent className="p-6">
-                <h3 className="mb-2 text-xl font-medium">{story.title}</h3>
+              <CardContent className="p-6 flex flex-col flex-grow">
+                <h3 className="mb-3 text-xl font-semibold line-clamp-2">{story.title}</h3>
                 <div className="mb-4 flex flex-wrap gap-3 text-sm text-muted-foreground">
                   <div className="flex items-center gap-1">
-                    <MapPin className="h-3.5 w-3.5" />
+                    <MapPin className="h-3.5 w-3.5 flex-shrink-0" />
                     <span>{story.location}</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <Calendar className="h-3.5 w-3.5" />
+                    <Calendar className="h-3.5 w-3.5 flex-shrink-0" />
                     <span>{story.date}</span>
                   </div>
                 </div>
-                <p className="mb-4 text-muted-foreground">{story.description}</p>
+                <p className="mb-6 text-muted-foreground flex-grow line-clamp-3">{story.description}</p>
                 <Button
                   variant="outline"
                   size="sm"
-                  className="w-full transition-colors hover:bg-secondary hover:text-secondary-foreground"
+                  className="w-full mt-auto transition-colors hover:bg-primary hover:text-primary-foreground bg-transparent"
                 >
                   Read Full Story
                 </Button>
