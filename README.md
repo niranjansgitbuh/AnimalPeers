@@ -112,48 +112,6 @@ AnimalPeers is a comprehensive digital platform designed to connect people who f
 5. **Open your browser**
    Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
 
-## 📁 Project Structure
-
-\`\`\`
-animalpeers/
-├── app/                          # Next.js App Router pages
-│   ├── dashboard/               # Dashboard pages
-│   │   ├── cases/              # Case management
-│   │   ├── impact/             # Impact dashboard
-│   │   └── page.tsx            # Main dashboard
-│   ├── pet-care/               # Pet care services
-│   │   ├── schedule/           # Appointment scheduling
-│   │   └── dashboard/          # Pet care dashboard
-│   ├── donate/                 # Donation pages
-│   ├── emergency/              # Emergency services
-│   ├── ai-tools/               # AI-powered tools
-│   ├── about/                  # About page
-│   ├── volunteer/              # Volunteer registration
-│   ├── login/                  # Authentication
-│   ├── register/               # User registration
-│   ├── report/                 # Animal reporting
-│   ├── api/                    # API routes
-│   ├── layout.tsx              # Root layout
-│   ├── page.tsx                # Homepage
-│   └── globals.css             # Global styles
-├── components/                  # Reusable components
-│   ├── ui/                     # UI components (shadcn/ui)
-│   ├── dashboard/              # Dashboard components
-│   ├── pet-care/               # Pet care components
-│   ├── donation/               # Donation components
-│   ├── ai/                     # AI tool components
-│   ├── emergency/              # Emergency components
-│   ├── auth/                   # Authentication components
-│   └── ...                     # Other feature components
-├── lib/                        # Utility functions
-├── hooks/                      # Custom React hooks
-├── public/                     # Static assets
-├── styles/                     # Additional styles
-├── tailwind.config.js          # Tailwind configuration
-├── next.config.js              # Next.js configuration
-├── package.json                # Dependencies
-└── README.md                   # This file
-\`\`\`
 
 ## 🎯 Key Pages & Features
 
