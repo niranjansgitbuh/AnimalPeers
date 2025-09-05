@@ -1,7 +1,18 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Stethoscope, Syringe, Scissors, Heart, Shield, Clock, Calendar, Star, CheckCircle, ArrowRight } from 'lucide-react'
+import {
+  Stethoscope,
+  Syringe,
+  Scissors,
+  Heart,
+  Shield,
+  Clock,
+  Calendar,
+  Star,
+  CheckCircle,
+  ArrowRight,
+} from "lucide-react"
 import Link from "next/link"
 
 const services = [
@@ -130,7 +141,7 @@ export function ServicesList() {
             return (
               <Card
                 key={index}
-                className="group relative h-full hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 shadow-lg bg-white/80 backdrop-blur-sm overflow-visible border-gray-200"
+                className="group relative h-full hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 shadow-lg bg-white/80 backdrop-blur-sm overflow-visible border-gray-200 flex flex-col"
               >
                 {/* Popular Badge */}
                 {service.popular && (
@@ -156,7 +167,7 @@ export function ServicesList() {
                       <Icon className="h-7 w-7 text-primary" />
                     </div>
                     <div className="flex-1 space-y-2">
-                      <CardTitle className="text-xl font-bold leading-tight group-hover:text-primary transition-colors">
+                      <CardTitle className="text-xl font-bold leading-tight group-hover:text-primary transition-colors line-clamp-2 min-h-[3.5rem]">
                         {service.title}
                       </CardTitle>
 
@@ -182,14 +193,14 @@ export function ServicesList() {
                   </div>
                 </CardHeader>
 
-                <CardContent className="space-y-6">
+                <CardContent className="space-y-6 flex-1 flex flex-col">
                   {/* Description */}
-                  <CardDescription className="text-base leading-relaxed text-foreground/80">
+                  <CardDescription className="text-base leading-relaxed text-foreground/80 line-clamp-3 min-h-[4.5rem]">
                     {service.description}
                   </CardDescription>
 
                   {/* Features List */}
-                  <div className="space-y-3">
+                  <div className="space-y-3 flex-1">
                     <h4 className="font-semibold text-sm text-foreground/90">What's Included:</h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
@@ -202,7 +213,7 @@ export function ServicesList() {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="pt-4 space-y-3">
+                  <div className="pt-4 space-y-3 mt-auto">
                     <Button
                       asChild
                       className="w-full h-12 bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary shadow-lg hover:shadow-xl transition-all duration-300 group"
