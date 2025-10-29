@@ -275,3 +275,4 @@ export function AboutContent() {
     </section>
   )
 }
+
