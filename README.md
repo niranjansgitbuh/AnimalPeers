@@ -110,7 +110,7 @@ AnimalPeers is a comprehensive digital platform designed to connect people who f
    \`\`\`
 
 5. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000) to see the application.
+   Navigate to [http://localhost:3000]([http://localhost:3000](https://v0-animal-peers.vercel.app/)) to see the application.
 
 
 ## 🎯 Key Pages & Features
